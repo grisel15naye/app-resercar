@@ -1,19 +1,15 @@
-<mat-toolbar>
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-      <mat-icon>menu</mat-icon>
-    </button>
-    <span (click)="irMenu()">App IDAT</span>&nbsp;&nbsp;
-    &nbsp;
-    <button mat-flat-button (click)="irServicios()">Servicios</button>
-    &nbsp;
-    <button mat-flat-button (click)="irReservar()">Reservar</button>
-    &nbsp;
-    <button mat-flat-button (click)="irMispagos()">Mispagos</button>
-    &nbsp;
-    <span class="example-spacer"></span>    
-    <button (click)="salir()" mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-      <mat-icon>logout</mat-icon>
-    </button>
-  </mat-toolbar>
-<hr />
+<mat-toolbar color="primary">
+  <button mat-icon-button aria-label="Example icon-button with menu icon">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span (click)="irMenu()">Bienvenido Cliente</span>
+  <span class="example-spacer"></span>
+  <button mat-flat-button (click)="irServicios()">Servicios</button>
+  <button mat-flat-button (click)="irReservar()">Reservar</button>
+  <button mat-flat-button (click)="irReservar()">Mis Reservas</button>
+  <button mat-flat-button (click)="irMispagos()">Mis Pagos</button>
+  <button mat-icon-button aria-label="Example icon-button with logout icon" (click)="salir()">
+    <mat-icon>logout</mat-icon>
+  </button>
+</mat-toolbar>
 <router-outlet></router-outlet>
