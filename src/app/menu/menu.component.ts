@@ -24,6 +24,9 @@ export class MenuComponent {
   irReservar(){
     this.router.navigate(["reservar"], {relativeTo: this.route})
   }
+  irMisReservas(){
+    this.router.navigate(["misreservas"], {relativeTo: this.route})
+  }
   irMispagos(){
     this.router.navigate(["mispagos"], {relativeTo: this.route})
   }

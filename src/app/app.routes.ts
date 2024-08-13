@@ -10,6 +10,7 @@ import { ClienteComponent } from './menuadmin/cliente/cliente.component';
 import { SedesComponent } from './menuadmin/sedes/sedes.component';
 import { TrabajadorComponent } from './menuadmin/trabajador/trabajador.component';
 import { ProgramacionComponent } from './menuadmin/programacion/programacion.component';
+import { MisreservasComponent } from './menu/misreservas/misreservas.component';
 
 export const routes: Routes = [
     {path:"menu", component:MenuComponent,
@@ -18,6 +19,7 @@ export const routes: Routes = [
             {path: "home", component: MenuComponent},
             {path: "servicios", component: ServiciosComponent},
             {path: "reservar", component: ReservarComponent},
+            {path: "misreservas", component: MisreservasComponent},
             {path: "mispagos", component: MispagosComponent}
         ]
     },
