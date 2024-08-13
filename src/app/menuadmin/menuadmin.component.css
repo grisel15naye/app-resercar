@@ -1,0 +1,96 @@
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+
+/* Sidebar (Sidenav) */
+.navbar-lateral {
+    width: 250px;
+    background-color: black;
+    padding: 20px;
+    color: white;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    overflow-y: auto;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    border-radius: 0;
+}
+
+.navbar-lateral h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #f8f9fa;
+}
+
+.mat-nav-list {
+    padding: 0;
+}
+
+.mat-list-item {
+    margin-bottom: 10px;
+}
+
+.mat-menu-item {
+    color: #000000;
+}
+
+.mat-menu-item:hover {
+    color: #ffffff;
+    background-color: #ffffff;
+    border-radius: 5px;
+}
+
+.mat-sidenav-content {
+    margin-left: 250px;
+    padding: 20px;
+    margin-top: 50px; /* Ensure the top bar does not cover content */
+}
+
+.top-bar {
+    width: calc(100% - 250px);
+    background-color: #000000;
+    padding: 10px 20px;
+    color: white;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.top-bar span {
+    font-size: 18px;
+}
+
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+/* Custom Tree Node Styles */
+mat-tree {
+    background-color: #333; /* Match with sidebar color */
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+mat-tree-node {
+    padding: 10px;
+    color: white;
+    font-size: 16px;
+    background-color: #444;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+mat-tree-node:hover {
+    background-color: #555;
+}

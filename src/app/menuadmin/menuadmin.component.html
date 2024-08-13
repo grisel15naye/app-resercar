@@ -1,0 +1,58 @@
+<mat-sidenav-container>
+    <mat-sidenav mode="side" opened class="navbar-lateral">
+      <h1>CARWASH RESERCAR</h1>
+      <mat-nav-list>
+        <mat-list-item>
+          <button mat-button (click)="irDasboard()">Dashboard</button>
+        </mat-list-item>
+        <mat-list-item>
+          <button mat-button [matMenuTriggerFor]="userMenu">GESTIONAR USUARIOS</button>
+          <mat-menu #userMenu="matMenu">
+            <button mat-menu-item (click)="irUsuario()">Ver usuario</button>
+          </mat-menu>
+        </mat-list-item>
+        <mat-list-item>
+          <button mat-button [matMenuTriggerFor]="clientMenu">CLIENTE</button>
+          <mat-menu #clientMenu="matMenu">
+            <button mat-menu-item (click)="irCliente()">Ver clientes</button>
+          </mat-menu>
+        </mat-list-item>
+        <mat-list-item>
+          <button mat-button [matMenuTriggerFor]="locationMenu">SEDE</button>
+          <mat-menu #locationMenu="matMenu">
+            <button mat-menu-item (click)="irSedes()">Ver Sedes</button>
+          </mat-menu>
+        </mat-list-item>
+        <mat-list-item>
+          <button mat-button [matMenuTriggerFor]="workerMenu">TRABAJADORES</button>
+          <mat-menu #workerMenu="matMenu">
+            <button mat-menu-item (click)="irTrabajador()">Ver Trabajadores</button>
+          </mat-menu>
+        </mat-list-item>
+        <mat-list-item>
+          <button mat-button [matMenuTriggerFor]="scheduleMenu">PROGRAMACION</button>
+          <mat-menu #scheduleMenu="matMenu">
+            <button mat-menu-item (click)="irProgramacion()">Ver Programacion</button>
+          </mat-menu>
+        </mat-list-item>
+        <mat-list-item>
+          <button  (click)="cerrarsecion()" mat-raised-button color="primary">Cerrar Sesión</button>
+        </mat-list-item>
+      </mat-nav-list>
+    </mat-sidenav>
+    
+    <mat-sidenav-content>
+      <mat-toolbar class="top-bar">
+        <button mat-icon-button (click)="irDasboard()">
+          <mat-icon>menu</mat-icon>
+        </button>
+        <span>Bienvenido Administrador(a) </span>
+        <span class="example-spacer"></span>
+        <button mat-icon-button (click)="cerrarsecion()">
+          <mat-icon>logout</mat-icon>
+        </button>
+      </mat-toolbar>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>
+  
