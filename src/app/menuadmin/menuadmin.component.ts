@@ -15,8 +15,8 @@ export class MenuadminComponent {
 
   ){
   }
-  irDasboard(){
-    this.router.navigate(["dasboard"], {relativeTo: this.route})
+  irDashboard(){
+    this.router.navigate(["dashboard"], {relativeTo: this.route})
   }
 
   irUsuario(){
