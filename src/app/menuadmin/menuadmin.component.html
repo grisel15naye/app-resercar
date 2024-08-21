@@ -35,9 +35,6 @@
             <button mat-menu-item (click)="irProgramacion()">Ver Programacion</button>
           </mat-menu>
         </mat-list-item>
-        <mat-list-item>
-          <button  (click)="cerrarsecion()" mat-raised-button color="primary">Cerrar Sesión</button>
-        </mat-list-item>
       </mat-nav-list>
     </mat-sidenav>
     
@@ -48,9 +45,6 @@
         </button>
         <span>Bienvenido Administrador(a) </span>
         <span class="example-spacer"></span>
-        <button mat-icon-button (click)="cerrarsecion()">
-          <mat-icon>logout</mat-icon>
-        </button>
       </mat-toolbar>
       <router-outlet></router-outlet>
     </mat-sidenav-content>

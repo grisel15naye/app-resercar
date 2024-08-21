@@ -34,9 +34,6 @@ export class MenuadminComponent {
   irProgramacion(){
     this.router.navigate(["programacion"], {relativeTo: this.route})
   }
-  cerrarsecion(){
-    this.router.navigateByUrl("/login")
-  }
 
 }
 
