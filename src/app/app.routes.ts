@@ -11,6 +11,8 @@ import { SedesComponent } from './menuadmin/sedes/sedes.component';
 import { TrabajadorComponent } from './menuadmin/trabajador/trabajador.component';
 import { ProgramacionComponent } from './menuadmin/programacion/programacion.component';
 import { MisreservasComponent } from './menu/misreservas/misreservas.component';
+import { Component } from '@angular/core';
+import { AccionesComponent } from './menuadmin/catalogo/acciones-listar/acciones/acciones.component';
 
 export const routes: Routes = [
     {path:"menu", component:MenuComponent,
@@ -28,6 +30,7 @@ export const routes: Routes = [
         children: [
             {path: "dashboard", component: DashboardComponent},
             {path: "usuario", component: UsuarioComponent},
+            {path:"acciones", component: AccionesComponent},
             {path: "cliente", component: ClienteComponent},
             {path: "sedes", component: SedesComponent},
             {path: "trabajador", component: TrabajadorComponent},

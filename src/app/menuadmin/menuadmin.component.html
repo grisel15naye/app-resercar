@@ -18,6 +18,12 @@
           </mat-menu>
         </mat-list-item>
         <mat-list-item>
+          <button mat-button [matMenuTriggerFor]="CatalogMenu">CATALOGO</button>
+          <mat-menu #CatalogMenu="matMenu">
+            <button mat-menu-item (click)="irAcciones()">Ver acciones</button>
+          </mat-menu>
+        </mat-list-item>
+        <mat-list-item>
           <button mat-button [matMenuTriggerFor]="locationMenu">SEDE</button>
           <mat-menu #locationMenu="matMenu">
             <button mat-menu-item (click)="irSedes()">Ver Sedes</button>

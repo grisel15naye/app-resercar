@@ -25,6 +25,9 @@ export class MenuadminComponent {
   irCliente(){
     this.router.navigate(["cliente"], {relativeTo: this.route})
   }
+  irAcciones(){
+    this.router.navigate(["acciones"],{relativeTo: this.route})
+  }
   irSedes(){
     this.router.navigate(["sedes"], {relativeTo: this.route})
   }
