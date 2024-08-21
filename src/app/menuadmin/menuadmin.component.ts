@@ -34,7 +34,4 @@ export class MenuadminComponent {
   irProgramacion(){
     this.router.navigate(["programacion"], {relativeTo: this.route})
   }
-
 }
-
-
