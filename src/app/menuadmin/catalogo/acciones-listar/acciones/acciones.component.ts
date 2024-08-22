@@ -33,5 +33,12 @@ const ELEMENT_DATA: PeriodicElement[] = [
 export class AccionesComponent {
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
   dataSource = ELEMENT_DATA;
+  constructor(private categoryService: CategoryService){
 
+  }
+
+
+  ngOnInit(): void {
+    this.categoryService.getAllCategory()
+  }
 }
