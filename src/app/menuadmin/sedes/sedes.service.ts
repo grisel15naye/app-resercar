@@ -21,5 +21,8 @@ export class SedesService {
   createSedes(sedes: Sedes): Observable<Sedes> {
     return this.httpClient.post<Sedes>("http://localhost:8080/sedes", sedes);
   }
+  updateSede(id: number, sedes: Sedes): Observable<Sedes> {
+    return this.httpClient.put<Sedes>("http://localhost:8080/sedes/" + id, sedes);
+  }
 
 }
