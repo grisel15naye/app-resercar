@@ -3,7 +3,7 @@
       <h1>CARWASH RESERCAR</h1>
       <mat-nav-list>
         <mat-list-item>
-          <button mat-button (click)="irDasboard()">Dashboard</button>
+          <button mat-button (click)="irDashboard()">Dashboard</button>
         </mat-list-item>
         <mat-list-item>
           <button mat-button [matMenuTriggerFor]="userMenu">GESTIONAR USUARIOS</button>
@@ -15,6 +15,12 @@
           <button mat-button [matMenuTriggerFor]="clientMenu">CLIENTE</button>
           <mat-menu #clientMenu="matMenu">
             <button mat-menu-item (click)="irCliente()">Ver clientes</button>
+          </mat-menu>
+        </mat-list-item>
+        <mat-list-item>
+          <button mat-button [matMenuTriggerFor]="CatalogMenu">CATALOGO</button>
+          <mat-menu #CatalogMenu="matMenu">
+            <button mat-menu-item (click)="irAcciones()">Ver acciones</button>
           </mat-menu>
         </mat-list-item>
         <mat-list-item>
@@ -35,22 +41,16 @@
             <button mat-menu-item (click)="irProgramacion()">Ver Programacion</button>
           </mat-menu>
         </mat-list-item>
-        <mat-list-item>
-          <button  (click)="cerrarsecion()" mat-raised-button color="primary">Cerrar Sesión</button>
-        </mat-list-item>
       </mat-nav-list>
     </mat-sidenav>
     
     <mat-sidenav-content>
       <mat-toolbar class="top-bar">
-        <button mat-icon-button (click)="irDasboard()">
+        <button mat-icon-button (click)="irDashboard()">
           <mat-icon>menu</mat-icon>
         </button>
         <span>Bienvenido Administrador(a) </span>
         <span class="example-spacer"></span>
-        <button mat-icon-button (click)="cerrarsecion()">
-          <mat-icon>logout</mat-icon>
-        </button>
       </mat-toolbar>
       <router-outlet></router-outlet>
     </mat-sidenav-content>

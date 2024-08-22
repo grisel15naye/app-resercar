@@ -15,8 +15,8 @@ export class MenuadminComponent {
 
   ){
   }
-  irDasboard(){
-    this.router.navigate(["dasboard"], {relativeTo: this.route})
+  irDashboard(){
+    this.router.navigate(["dashboard"], {relativeTo: this.route})
   }
 
   irUsuario(){
@@ -24,6 +24,9 @@ export class MenuadminComponent {
   }
   irCliente(){
     this.router.navigate(["cliente"], {relativeTo: this.route})
+  }
+  irAcciones(){
+    this.router.navigate(["acciones"],{relativeTo: this.route})
   }
   irSedes(){
     this.router.navigate(["sedes"], {relativeTo: this.route})
@@ -34,10 +37,4 @@ export class MenuadminComponent {
   irProgramacion(){
     this.router.navigate(["programacion"], {relativeTo: this.route})
   }
-  cerrarsecion(){
-    this.router.navigateByUrl("/login")
-  }
-
 }
-
-
