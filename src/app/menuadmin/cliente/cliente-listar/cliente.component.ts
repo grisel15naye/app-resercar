@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {ClienteService} from '../cliente/cliente.service'
-import { MaterialModule } from '../../angular-material/material/material.module';
-import { Cliente } from './cliente';
+import {ClienteService} from '../cliente.service'
+import { MaterialModule } from '../../../angular-material/material/material.module';
+import { Cliente } from '../cliente';
 import { ActivatedRoute, Route, Router } from '@angular/router';
 
 @Component({
@@ -31,9 +31,10 @@ export class ClienteComponent {
   }
 
   irDetalleCliente(id: string){
-
+    this.router.navigate([id],{relativeTo: this.route})
   }
-  irCrearCategoria(){
 
+  irCrearCliente(){
+    this.router.navigate(["nuevo"],{relativeTo:this.route})
   }
 }

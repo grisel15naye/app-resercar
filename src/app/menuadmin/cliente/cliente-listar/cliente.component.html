@@ -1,3 +1,5 @@
+<button mat-raised-button="primary"
+(click)="irCrearCliente()">Nuevo Cliente</button>
 <table mat-table [dataSource]="cliente" class="mat-elevation-z8">
 
     <!--- Note that these columns can be defined in any order.
@@ -54,7 +56,8 @@
     <!-- Header Row -->    
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <!-- Data Rows -->
-    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-  </table>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"
+    (click)="irDetalleCliente(row.clienteid)"></tr>
+</table>
   
   
