@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { MaterialModule } from '../../../../angular-material/material/material.module';
+import { ActivatedRoute } from '@angular/router';
 
 
 export interface PeriodicElement {
@@ -31,14 +32,23 @@ const ELEMENT_DATA: PeriodicElement[] = [
   styleUrl: './acciones.component.css'
 })
 export class AccionesComponent {
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
-  dataSource = ELEMENT_DATA;
-  constructor(private categoryService: CategoryService){
+  displayedColumns: string[] = ['accionesid', 'descripcion', 'precio', 'estadoacc'];
+  
+  acciones: Acciones[] = []
+  
+  constructor(private accionesService: AccionesService,
+    private route: ActivatedRoute,
+    private router: Router
+  ){
 
   }
 
 
   ngOnInit(): void {
-    this.categoryService.getAllCategory()
+    this.accionesService.getAllCategory()
+    .subscribe((data) => {
+      this.categories = data
+    })
   }
+
 }
