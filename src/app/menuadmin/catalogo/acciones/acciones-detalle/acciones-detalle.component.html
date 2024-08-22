@@ -1,0 +1,36 @@
+<div class="module-header">
+    <div class="left">
+        <h3>{{formTitulo}}</h3>
+    </div>
+    <div class="right">
+        <button mat-raised-button color="primary" (click)="guardarAccion()">
+            Guardar
+        </button>        
+    </div>
+</div>
+<hr />
+<div class="form-container">
+    <form class="form" [formGroup]="accionForm">
+
+        <mat-form-field>
+            <mat-label>ID:</mat-label>
+            <input matInput type="number" formControlName="accionesid" [attr.disabled]="formType === FormType.Actualizar ? true : null">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Descripción:</mat-label>
+            <input matInput type="text" formControlName="descripcion">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Precio:</mat-label>
+            <input matInput type="number" formControlName="precio">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Estado:</mat-label>
+            <mat-select formControlName="estadoacc">
+                <mat-option [value]="true">Activo</mat-option>
+                <mat-option [value]="false">Inactivo</mat-option>
+            </mat-select>
+        </mat-form-field>
+    </form>
+</div>
+

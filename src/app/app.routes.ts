@@ -12,7 +12,7 @@ import { TrabajadorComponent } from './menuadmin/trabajador/trabajador.component
 import { ProgramacionComponent } from './menuadmin/programacion/programacion.component';
 import { MisreservasComponent } from './menu/misreservas/misreservas.component';
 import { Component } from '@angular/core';
-import { AccionesComponent } from './menuadmin/catalogo/acciones-listar/acciones.component';
+import { AccionesComponent } from './menuadmin/catalogo/acciones/acciones-listar/acciones.component';
 import { SedesListarComponent } from './menuadmin/sedes/sedes-listar/sedes-listar.component';
 
 export const routes: Routes = [
