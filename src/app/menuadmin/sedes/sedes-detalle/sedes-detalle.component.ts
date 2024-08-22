@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from '../../../angular-material/material/material.module';
-import { SedesService } from '../SedesService';
+import { SedesService } from '../sedes.service';
 enum FormType{
   Crear = 0,
   Actualizar = 1
@@ -50,6 +50,8 @@ export class SedesDetalleComponent {
       viernes: new FormControl(''),
       sabado: new FormControl(''),
       domingo: new FormControl(''),
+      horaabierto: new FormControl(''),
+      horacierre: new FormControl(''),
     })
   }
   get nombreSedeError(): string {
@@ -91,6 +93,7 @@ export class SedesDetalleComponent {
           domingo: data.domingo,
           horaabierto: data.horaabierto,
           horacierre: data.horacierre,
+          estadosede: data.estadosede,
         });
       });
   }

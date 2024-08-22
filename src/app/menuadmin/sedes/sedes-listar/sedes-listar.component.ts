@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Sedes } from '../sedes';
-import { SedesService } from '../SedesService';
+import { SedesService } from '../sedes.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { MaterialModule } from '../../../angular-material/material/material.module';
 
@@ -9,33 +9,33 @@ import { MaterialModule } from '../../../angular-material/material/material.modu
   standalone: true,
   imports: [MaterialModule],
   templateUrl: './sedes-listar.component.html',
-  styleUrl: './sedes-listar.component.css'
+  styleUrls: ['./sedes-listar.component.css'] // Se cambió `styleUrl` a `styleUrls`
 })
-export class SedesListarComponent {
-  displayedColumns: string[] = ['sedeid', 'nombresede', 'sedeinfo','lunes','martes','miercoles','jueves','viernes','sabado','domingo','horaabierto','horacierre',
-    'description'];
+export class SedesListarComponent implements OnInit { // Implementa OnInit para usar ngOnInit
+  displayedColumns: string[] = [
+    'sedeid', 'nombresede', 'sedeinfo', 'lunes', 'martes', 'miercoles',
+    'jueves', 'viernes', 'sabado', 'domingo', 'horaabierto', 'horacierre', 'estadosede'
+  ];
 
-  sede: Sedes[] = []
+  sede: Sedes[] = [];
 
-  constructor(private sedesService: SedesService,
+  constructor(
+    private sedesService: SedesService,
     private route: ActivatedRoute,
     private router: Router
-  ){
-  }
+  ) {}
 
   ngOnInit(): void {
-    this.sedesService.getAllSedes()
-    .subscribe((data) => {
-      this.sede = data
-    })
+    this.sedesService.getAllSedes().subscribe((data: Sedes[]) => {
+      this.sede = data;
+    });
   }
 
-  irDetalleSedes(id: string){
-    this.router.navigate([id], {relativeTo: this.route})
+  irDetalleSedes(id: string): void {
+    this.router.navigate([id], { relativeTo: this.route });
   }
 
-  irCrearsedes(){
-    this.router.navigate(["nuevo"], {relativeTo: this.route})
+  irCrearSedes(): void {
+    this.router.navigate(['nuevo'], { relativeTo: this.route });
   }
-
 }

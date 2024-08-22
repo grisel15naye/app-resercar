@@ -13,6 +13,7 @@ import { ProgramacionComponent } from './menuadmin/programacion/programacion.com
 import { MisreservasComponent } from './menu/misreservas/misreservas.component';
 import { Component } from '@angular/core';
 import { AccionesComponent } from './menuadmin/catalogo/acciones-listar/acciones.component';
+import { SedesListarComponent } from './menuadmin/sedes/sedes-listar/sedes-listar.component';
 
 export const routes: Routes = [
     {path:"menu", component:MenuComponent,
@@ -32,7 +33,7 @@ export const routes: Routes = [
             {path: "usuario", component: UsuarioComponent},
             {path:"acciones", component: AccionesComponent},
             {path: "cliente", component: ClienteComponent},
-            {path: "sedes", component: SedesComponent},
+            {path: "sedes", component:SedesListarComponent},
             {path: "trabajador", component: TrabajadorComponent},
             {path: "programacion", component: ProgramacionComponent}
 
