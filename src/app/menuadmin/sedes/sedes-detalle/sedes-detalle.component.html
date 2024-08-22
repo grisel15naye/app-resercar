@@ -1,0 +1,50 @@
+<!-- Modal Sede usando Angular Material -->
+<mat-dialog-content>
+    <h1 mat-dialog-title>Sede</h1>
+    
+    <div class="form-container">
+      <form [formGroup]="sedeForm">
+        
+        <mat-form-field appearance="fill">
+          <mat-label>Nombre de la sede</mat-label>
+          <input matInput placeholder="Nombre de la sede" formControlName="nombresede">
+          <mat-error *ngIf="sedeForm.get('nombresede').invalid">{{ nombreSedeError }}</mat-error>
+        </mat-form-field>
+        
+        <mat-form-field appearance="fill">
+          <mat-label>Información de la sede</mat-label>
+          <input matInput placeholder="Información de la sede" formControlName="sedeinfo">
+        </mat-form-field>
+        
+        <div class="dias-y-horas">
+          <div class="dias">
+            <h5>Selecciona el día</h5>
+            <mat-checkbox formControlName="lunes">LUN</mat-checkbox>
+            <mat-checkbox formControlName="martes">MAR</mat-checkbox>
+            <mat-checkbox formControlName="miercoles">MIE</mat-checkbox>
+            <mat-checkbox formControlName="jueves">JUE</mat-checkbox>
+            <mat-checkbox formControlName="viernes">VIE</mat-checkbox>
+            <mat-checkbox formControlName="sabado">SAB</mat-checkbox>
+            <mat-checkbox formControlName="domingo">DOM</mat-checkbox>
+          </div>
+          
+          <div class="horas">
+            <mat-form-field appearance="fill">
+              <mat-label>Hora de Apertura</mat-label>
+              <input matInput type="time" formControlName="horaabierto">
+              <mat-error *ngIf="sedeForm.get('horaabierto').invalid">{{ horaAbiertoError }}</mat-error>
+            </mat-form-field>
+            
+            <mat-form-field appearance="fill">
+              <mat-label>Hora de Cierre</mat-label>
+              <input matInput type="time" formControlName="horacierre">
+              <mat-error *ngIf="sedeForm.get('horacierre').invalid">{{ horaCierreError }}</mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+        
+        <input type="hidden" formControlName="codsede" value="0">
+      </form>
+    </div>
+  </mat-dialog-content>
+  

@@ -1,0 +1,93 @@
+<div class="main-content">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>Mantenimiento de Sede</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <button mat-raised-button color="primary" (click)="irCrearsedes()">Agregar</button>
+        <div id="divmensaje"></div>
+        <table mat-table [dataSource]="sede" class="mat-elevation-z8">
+  
+          <!-- ID Column -->
+          <ng-container matColumnDef="sedeid">
+            <th mat-header-cell *matHeaderCellDef> ID </th>
+            <td mat-cell *matCellDef="let element"> {{element.sedeid}} </td>
+          </ng-container>
+  
+          <!-- Nombre Column -->
+          <ng-container matColumnDef="nombresede">
+            <th mat-header-cell *matHeaderCellDef> Nombre </th>
+            <td mat-cell *matCellDef="let element"> {{element.nombresede}} </td>
+          </ng-container>
+  
+          <!-- Info Column -->
+          <ng-container matColumnDef="sedeinfo">
+            <th mat-header-cell *matHeaderCellDef> Info </th>
+            <td mat-cell *matCellDef="let element"> {{element.sedeinfo}} </td>
+          </ng-container>
+  
+          <!-- Days Columns -->
+          <ng-container matColumnDef="lunes">
+            <th mat-header-cell *matHeaderCellDef> Lunes </th>
+            <td mat-cell *matCellDef="let element"> {{element.lunes ? 'Sí' : 'No'}} </td>
+          </ng-container>
+          <ng-container matColumnDef="martes">
+            <th mat-header-cell *matHeaderCellDef> Martes </th>
+            <td mat-cell *matCellDef="let element"> {{element.martes ? 'Sí' : 'No'}} </td>
+          </ng-container>
+          <ng-container matColumnDef="miercoles">
+            <th mat-header-cell *matHeaderCellDef> Miércoles </th>
+            <td mat-cell *matCellDef="let element"> {{element.miercoles ? 'Sí' : 'No'}} </td>
+          </ng-container>
+          <ng-container matColumnDef="jueves">
+            <th mat-header-cell *matHeaderCellDef> Jueves </th>
+            <td mat-cell *matCellDef="let element"> {{element.jueves ? 'Sí' : 'No'}} </td>
+          </ng-container>
+          <ng-container matColumnDef="viernes">
+            <th mat-header-cell *matHeaderCellDef> Viernes </th>
+            <td mat-cell *matCellDef="let element"> {{element.viernes ? 'Sí' : 'No'}} </td>
+          </ng-container>
+          <ng-container matColumnDef="sabado">
+            <th mat-header-cell *matHeaderCellDef> Sábado </th>
+            <td mat-cell *matCellDef="let element"> {{element.sabado ? 'Sí' : 'No'}} </td>
+          </ng-container>
+          <ng-container matColumnDef="domingo">
+            <th mat-header-cell *matHeaderCellDef> Domingo </th>
+            <td mat-cell *matCellDef="let element"> {{element.domingo ? 'Sí' : 'No'}} </td>
+          </ng-container>
+  
+          <!-- Hora Apertura Column -->
+          <ng-container matColumnDef="horaabierto">
+            <th mat-header-cell *matHeaderCellDef> Hora Apertura </th>
+            <td mat-cell *matCellDef="let element"> {{element.horaabierto}} </td>
+          </ng-container>
+  
+          <!-- Hora Cierre Column -->
+          <ng-container matColumnDef="horacierre">
+            <th mat-header-cell *matHeaderCellDef> Hora Cierre </th>
+            <td mat-cell *matCellDef="let element"> {{element.horacierre}} </td>
+          </ng-container>
+  
+          <!-- Estado Column -->
+          <ng-container matColumnDef="estadosede">
+            <th mat-header-cell *matHeaderCellDef> Estado </th>
+            <td mat-cell *matCellDef="let element"> {{element.estadosede ? 'Activo' : 'Inactivo'}} </td>
+          </ng-container>
+  
+          <!-- Action Column -->
+          <ng-container matColumnDef="actions">
+            <th mat-header-cell *matHeaderCellDef> Acciones </th>
+            <td mat-cell *matCellDef="let element">
+              <button mat-icon-button color="primary" (click)="irDetalleSedes(element.sedeid)">
+                <mat-icon>edit</mat-icon>
+              </button>
+            </td>
+          </ng-container>
+  
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  
