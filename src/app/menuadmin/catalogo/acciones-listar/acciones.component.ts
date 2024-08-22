@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { MaterialModule } from '../../../angular-material/material/material.module';
-
+import { Acciones } from './Acciones';
+import { CatalogoService } from '../catalogo.service';
+import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-acciones',
   standalone: true,
-  imports: [MaterialModule],
+  imports: [MaterialModule, CommonModule],
   templateUrl: './acciones.component.html',
   styleUrl: './acciones.component.css'
 })
@@ -14,7 +16,7 @@ export class AccionesComponent {
   
   acciones: Acciones[] = []
   
-  constructor(private accionesService: AccionesService,
+  constructor(private catalogoService: CatalogoService,
     private route: ActivatedRoute,
     private router: Router
   ){
@@ -23,7 +25,7 @@ export class AccionesComponent {
 
 
   ngOnInit(): void {
-    this.accionesService.getAllAcciones()
+    this.catalogoService.getAllAcciones()
     .subscribe((data) => {
       this.acciones = data
     })

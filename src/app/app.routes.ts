@@ -12,7 +12,7 @@ import { TrabajadorComponent } from './menuadmin/trabajador/trabajador.component
 import { ProgramacionComponent } from './menuadmin/programacion/programacion.component';
 import { MisreservasComponent } from './menu/misreservas/misreservas.component';
 import { Component } from '@angular/core';
-import { AccionesComponent } from './menuadmin/catalogo/acciones-listar/acciones/acciones.component';
+import { AccionesComponent } from './menuadmin/catalogo/acciones-listar/acciones.component';
 
 export const routes: Routes = [
     {path:"menu", component:MenuComponent,

@@ -24,7 +24,7 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatSortModule } from '@angular/material/sort';
-import { MatTableModule } from '@angular/material/table';
+import { MatTableDataSource, MatTableModule } from '@angular/material/table';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTooltipModule } from '@angular/material/tooltip';
@@ -63,7 +63,10 @@ import {MatTreeModule} from '@angular/material/tree';
     MatToolbarModule,
     MatTooltipModule,
     MatNativeDateModule,
-    MatTreeModule
+    MatTreeModule,
+    MatTableModule,
+    MatSortModule,
+    MatPaginatorModule
     
   ]
 })
